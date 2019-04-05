@@ -10,18 +10,14 @@ class EmailParser
     @email = email 
   end 
   
-  def parse
-    #binding.pry 
-    if @email.include?(", ") 
-      new_split = @email.split(", ")
-       new_split.map do |email| 
-         if email.include?(" ")
-           #binding.pry
-          email = email.split(" ")
-         end 
-       end 
-       binding.pry
+  def parse 
+     @email.split(/, | /)
+      binding.pry 
+      # new_split = @email.split(" " | ) 
+       #  elsif @email.include?(" ")
+        #   new_split = @email.split(" ")
     end 
+        new_split.uniq 
   end 
 
    
