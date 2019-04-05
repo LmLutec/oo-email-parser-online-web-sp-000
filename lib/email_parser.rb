@@ -11,12 +11,8 @@ class EmailParser
   end 
   
   def parse 
-     @email.split(/, | /)
-      binding.pry 
-      # new_split = @email.split(" " | ) 
-       #  elsif @email.include?(" ")
-        #   new_split = @email.split(" ")
-    end 
+      new_split = @email.split(/, | /)
+        
         new_split.uniq 
   end 
 
